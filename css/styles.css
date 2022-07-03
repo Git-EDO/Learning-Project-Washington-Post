@@ -35,7 +35,7 @@ li {
     left: 0;
     z-index: 2;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 85% 10%;
     align-items: center;
     background-color: #000;
 }
