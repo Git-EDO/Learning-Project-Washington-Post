@@ -12,3 +12,11 @@ burger.onclick = function() {
     login.classList.toggle('active');
     body.classList.toggle('lock');
 }
+
+menu.onclick = function () {
+    burger.classList.remove('active');
+    nav.classList.remove('active');
+    menu.classList.remove('active');
+    body.classList.remove('lock');
+    login.classList.remove('active');
+}

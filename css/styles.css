@@ -35,7 +35,7 @@ li {
     left: 0;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 90% 10%;
     align-items: center;
     background-color: #000;
 }
@@ -88,14 +88,12 @@ li {
     display: grid;
     grid-column: 2/3;
     grid-row: 1/2;
-    align-items: center;
     color: #fff;
+    width: 80px;
+    padding: 6px;
     background-color: rgba(255,255,255,0.2);
-    padding: 5px;
-    padding-left: 10px;
     border-radius: 2px;
     border: 1px solid rgba(255,255,255,0.3);
-    margin-right: 15px;
 }
 .nav__login a {
     grid-column: 1/2;
@@ -363,7 +361,7 @@ li {
         grid-template-columns: 1fr;
         grid-template-rows: 50px 1fr 80px;
         padding: 5px 15px;
-        height: 100vw;
+        height: 100vh;
     }
     .nav__menu {
         height: 100%;
@@ -389,6 +387,7 @@ li {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
         display: grid;
+        align-items: center;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(auto-fit, minmax(30px, auto));
         color: #fff;
