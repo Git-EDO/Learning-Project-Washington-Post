@@ -23,26 +23,28 @@ li {
     display: grid;
     height: 100vh;
     grid-template-rows: minmax(80px, 100px) 1fr minmax(200px auto);
+    position: relative;
 }
 
 /* === NAV === */
 
 .nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100vw;
     left: 0;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 100px; 
+    grid-template-columns: 1fr 100px;
     align-items: center;
     background-color: #000;
-    padding: 0 15px;
 }
 .nav__burger {
     display: none;
     width: 25px;
     height: 15px;
     position: relative;
+    margin-left: 15px;
 }
 .nav__burger span {
     width: 70%;
@@ -65,8 +67,6 @@ li {
 .nav__burger::before {
     top: 0;
 }
-.nav__menu {
-}
 .menu__list {
     display: grid;
     grid-auto-flow: column;
@@ -78,8 +78,6 @@ li {
 .menu__list a:hover{
     opacity: 0.8;
 }
-.menu__link {
-}
 .nav__login {
     transition: 0.5s ease;
 }
@@ -88,7 +86,8 @@ li {
 }
 .nav__login {
     display: grid;
-    grid-auto-flow: column;
+    grid-column: 2/3;
+    grid-row: 1/2;
     align-items: center;
     color: #fff;
     background-color: rgba(255,255,255,0.2);
@@ -96,8 +95,13 @@ li {
     padding-left: 10px;
     border-radius: 2px;
     border: 1px solid rgba(255,255,255,0.3);
+    margin-right: 15px;
+}
+.nav__login a {
+    grid-column: 1/2;
 }
 .nav__login img {
+    grid-column: 2/3;
     margin-left: 10px;
 }
 
@@ -107,6 +111,7 @@ li {
     text-align: center;
 }
 .main {
+    margin-top: 40px;
 }
 .main__content {
     display: grid;
@@ -358,13 +363,17 @@ li {
         grid-template-columns: 1fr;
         grid-template-rows: 50px 1fr 80px;
         padding: 5px 15px;
+        height: 100vw;
+    }
+    .nav__menu {
+        height: 100%;
     }
     .menu__list {
         display: none;
     }
     .nav__burger {
         display: inherit;
-        grid-column: 1 / 1;
+        grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
     .nav__login {
@@ -377,16 +386,15 @@ li {
         width: 100px;
     }
     .menu__list.active {
-        display: grid;
-        grid-template-rows: repeat(auto);
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        grid-auto-flow: row;
-        align-items: center;
-        width: 100vh;
-        height: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(30px, auto));
         color: #fff;
         padding: 0;
+        height: 100%;
+        width: 100%;
     }
     .menu__list a {
         font-size: 20px;
