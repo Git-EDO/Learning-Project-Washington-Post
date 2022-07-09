@@ -3,5 +3,6 @@
 ## My third layout project
 
 ### I've used the next approaches:
+- Fully responsive 320 - 1400+
 - Grid layout
 - Sticky nav menu
